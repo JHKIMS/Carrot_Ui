@@ -123,15 +123,47 @@ const Home: NextPage = () => {
           type="text"
           required
           placeholder="Username"
-          className="border p-1 peer border-gray-400 rounded" 
+          className="border p-1 peer border-gray-400 rounded"
         />
-        <span className="hidden peer-invalid:block text-red-500">This Input is invalid</span>
-        <span className="hidden peer-valid:block text-teal-500">Awesome Username</span>
+        <span className="hidden peer-invalid:block text-red-500">
+          This Input is invalid
+        </span>
+        <span className="hidden peer-valid:block text-teal-500">
+          Awesome Username
+        </span>
         <span className="hidden peer-hover:block peer-hover: text-amber-500">
           Peer Hover
         </span>
         <input type="submit" value="Login" />
       </form>
+
+      <div className="flex flex-col space-y-2 p-5">
+        <details>
+          <summary className="cursor-pointer">What is my fav?</summary>
+          <span className="selection:bg-indigo-500 selection:text-white">
+            운동
+          </span>
+        </details>
+        <details className="select-none open:text-white open:bg-indigo-400">
+          <summary className="cursor-pointer">What kind of?</summary>
+          <span>헬스</span>
+        </details>
+        <ul className="list-decimal marker:text-teal-500">
+          <li>hi</li>
+          <li>hi</li>
+          <li>hi</li>
+        </ul>
+        <input
+          type="file"
+          className="file:cursor-pointer file:hover:text-purple-400 file:hover:bg-white file:hover:border-purple-500 file:hover:border file:transition file:border-0 file:rounded-xl file:px-5 file:text-white file:bg-purple-400"
+        />
+
+        <p className="first-letter:text-3xl first-letter:hover:text-purple-500">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic reprehenderit do
+          lores molestias, similique quaerat velit soluta perspiciatis amet commodi tenetur i
+          tam quod quisquam sed praesentium ipsum necessitatibus quibusdam modi eum.
+        </p>
+      </div>
     </div>
   );
 };

@@ -17,7 +17,7 @@ const Home: NextPage = () => {
           ))}
         </ul>
         <ul>
-          {["a","b","c",""].map((c,i)=>(
+          {["a", "b", "c", ""].map((c, i) => (
             <li className="bg-red-500 py-2 empty:hidden" key={i}>
               {c}
             </li>
@@ -40,7 +40,8 @@ const Home: NextPage = () => {
           CheckOut
         </button>
       </div>
-      <div className="bg-white overflow-hidden rounded-3xl shadow-xl">
+
+      <div className="bg-white overflow-hidden rounded-3xl shadow-xl group">
         <div className="bg-blue-500 p-6 pb-14">
           <span className="text-white text-2xl">Profile</span>
         </div>
@@ -50,7 +51,7 @@ const Home: NextPage = () => {
               <span className="text-sm text-gray-500">Orders</span>
               <span className="font-medium">340</span>
             </div>
-            <div className="h-24 w-24 bg-gray-400 rounded-full" />
+            <div className="h-24 w-24 bg-gray-400 rounded-full group-hover:bg-red-300 transition-colors" />
             <div className="flex flex-col items-center">
               <span className="text-sm text-gray-500">Spent</span>
               <span className="font-medium">$350</span>
@@ -62,6 +63,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+
       <div className="bg-white p-10 rounded-2xl shadow-xl">
         <div className="flex mb-5 justify-between items-center">
           <span>🔙</span>
@@ -98,6 +100,38 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+
+      <form className="flex flex-col space-y-2 bg-blue-500 p-5 focus-within:bg-blue-100">
+        <input
+          type="text"
+          // disabled : 이 속성을 사용하면 클릭을 할 수 없다.
+          required
+          placeholder="Username"
+          className="required:border-2 border-yellow-400 placeholder:text-red-500"
+        />
+        <input
+          type="passowrd"
+          required
+          placeholder="Password"
+          className="invalid:bg-black"
+        />
+        <input type="submit" value="Login" className="bg-white" />
+      </form>
+
+      <form className="flex flex-col space-y-2 p-5">
+        <input
+          type="text"
+          required
+          placeholder="Username"
+          className="border p-1 peer border-gray-400 rounded" 
+        />
+        <span className="hidden peer-invalid:block text-red-500">This Input is invalid</span>
+        <span className="hidden peer-valid:block text-teal-500">Awesome Username</span>
+        <span className="hidden peer-hover:block peer-hover: text-amber-500">
+          Peer Hover
+        </span>
+        <input type="submit" value="Login" />
+      </form>
     </div>
   );
 };

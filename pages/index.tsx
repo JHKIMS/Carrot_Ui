@@ -5,8 +5,8 @@ import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-slate-400 py-20 px-10 grid gap-10">
-      <div className="bg-white p-6 rounded-3xl shadow-xl">
+    <div className="bg-slate-400 py-20 px-20 grid gap-10">
+      <div className="bg-white sm:hover:bg-pink-800 sm:bg-red-400 md:bg-teal-400 lg:bg-indigo-400 xl:bg-yellow-400 2xl:bg-pink-500 p-6 rounded-3xl shadow-xl">
         <span className="font-semibold text-3xl">Select Item</span>
         <ul>
           {[1, 2, 3].map((i) => (
@@ -101,68 +101,75 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <form className="flex flex-col space-y-2 bg-blue-500 p-5 focus-within:bg-blue-100">
-        <input
-          type="text"
-          // disabled : 이 속성을 사용하면 클릭을 할 수 없다.
-          required
-          placeholder="Username"
-          className="required:border-2 border-yellow-400 placeholder:text-red-500"
-        />
-        <input
-          type="passowrd"
-          required
-          placeholder="Password"
-          className="invalid:bg-black"
-        />
-        <input type="submit" value="Login" className="bg-white" />
-      </form>
+      <div className="bg-white p-10 rounded-2xl shadow-xl">
+        <form className="flex flex-col space-y-2 bg-blue-500 p-5 focus-within:bg-blue-100">
+          <input
+            type="text"
+            // disabled : 이 속성을 사용하면 클릭을 할 수 없다.
+            required
+            placeholder="Username"
+            className="required:border-2 border-yellow-400 placeholder:text-red-500"
+          />
+          <input
+            type="passowrd"
+            required
+            placeholder="Password"
+            className="invalid:bg-black"
+          />
+          <input type="submit" value="Login" className="bg-white" />
+        </form>
+      </div>
 
-      <form className="flex flex-col space-y-2 p-5">
-        <input
-          type="text"
-          required
-          placeholder="Username"
-          className="border p-1 peer border-gray-400 rounded"
-        />
-        <span className="hidden peer-invalid:block text-red-500">
-          This Input is invalid
-        </span>
-        <span className="hidden peer-valid:block text-teal-500">
-          Awesome Username
-        </span>
-        <span className="hidden peer-hover:block peer-hover: text-amber-500">
-          Peer Hover
-        </span>
-        <input type="submit" value="Login" />
-      </form>
-
-      <div className="flex flex-col space-y-2 p-5">
-        <details>
-          <summary className="cursor-pointer">What is my fav?</summary>
-          <span className="selection:bg-indigo-500 selection:text-white">
-            운동
+      <div className="bg-white p-10 rounded-2xl shadow-xl">
+        <form className="flex flex-col space-y-2 p-5">
+          <input
+            type="text"
+            required
+            placeholder="Username"
+            className="border p-1 peer border-gray-400 rounded"
+          />
+          <span className="hidden peer-invalid:block text-red-500">
+            This Input is invalid
           </span>
-        </details>
-        <details className="select-none open:text-white open:bg-indigo-400">
-          <summary className="cursor-pointer">What kind of?</summary>
-          <span>헬스</span>
-        </details>
-        <ul className="list-decimal marker:text-teal-500">
-          <li>hi</li>
-          <li>hi</li>
-          <li>hi</li>
-        </ul>
-        <input
-          type="file"
-          className="file:cursor-pointer file:hover:text-purple-400 file:hover:bg-white file:hover:border-purple-500 file:hover:border file:transition file:border-0 file:rounded-xl file:px-5 file:text-white file:bg-purple-400"
-        />
+          <span className="hidden peer-valid:block text-teal-500">
+            Awesome Username
+          </span>
+          <span className="hidden peer-hover:block peer-hover: text-amber-500">
+            Peer Hover
+          </span>
+          <input type="submit" value="Login" />
+        </form>
+      </div>
 
-        <p className="first-letter:text-3xl first-letter:hover:text-purple-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic reprehenderit do
-          lores molestias, similique quaerat velit soluta perspiciatis amet commodi tenetur i
-          tam quod quisquam sed praesentium ipsum necessitatibus quibusdam modi eum.
-        </p>
+      <div className="bg-white p-10 rounded-2xl shadow-xl">
+        <div className="flex flex-col space-y-2 p-5">
+          <details>
+            <summary className="cursor-pointer">What is my fav?</summary>
+            <span className="selection:bg-indigo-500 selection:text-white">
+              운동
+            </span>
+          </details>
+          <details className="select-none open:text-white open:bg-indigo-400">
+            <summary className="cursor-pointer">What kind of?</summary>
+            <span>헬스</span>
+          </details>
+          <ul className="list-decimal marker:text-teal-500">
+            <li>hi</li>
+            <li>hi</li>
+            <li>hi</li>
+          </ul>
+          <input
+            type="file"
+            className="file:cursor-pointer file:hover:text-purple-400 file:hover:bg-white file:hover:border-purple-500 file:hover:border file:transition file:border-0 file:rounded-xl file:px-5 file:text-white file:bg-purple-400"
+          />
+
+          <p className="first-letter:text-3xl first-letter:hover:text-purple-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic
+            reprehenderit do lores molestias, similique quaerat velit soluta
+            perspiciatis amet commodi tenetur i tam quod quisquam sed
+            praesentium ipsum necessitatibus quibusdam modi eum.
+          </p>
+        </div>
       </div>
     </div>
   );

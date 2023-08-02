@@ -1,18 +1,20 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+
+
 
 const Home: NextPage = () => {
   return (
     <div className="bg-slate-400 xl:place-content-center py-20 px-20 grid gap-10 lg:grid-cols-2 xl:grid-cols-6 min-h-screen">
-      <div className="bg-white  flex flex-col justify-between p-6 rounded-3xl shadow-xl">
-        <span className="font-semibold text-3xl">Select Item</span>
+      <h1 className="text[100px]">원하는 글자 사이즈</h1>
+      <div className="bg-white dark:bg-black flex flex-col justify-between p-6 rounded-3xl shadow-xl">
+        <span className="font-semibold dark:text-white text-3xl">Select Item</span>
         <ul>
           {[1, 2, 3].map((i) => (
             <div key={i} className="flex justify-between my-2">
-              <span className="text-gray-500">Grey Chair</span>
-              <span className="font-semibold">$19</span>
+              <span className="text-gray-500 dark:text-gray-200">Grey Chair</span>
+              <span className="font-semibold dark:text-white">$19</span>
             </div>
           ))}
         </ul>
@@ -32,9 +34,10 @@ const Home: NextPage = () => {
         <button
           className="mt-5 bg-blue-500 text-white p-3
           text-center rounded-xl w-3/4 mx-auto 
+          dark:hover:bg-white dark:hover:text-black
           hover:bg-teal-500 hover:text-black
           active:bg-yellow-500 focus:bg-red-500
-          block
+          block dark:bg-black dark:border-white dark:border
          "
         >
           CheckOut

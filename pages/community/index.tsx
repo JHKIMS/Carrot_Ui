@@ -3,7 +3,7 @@ import Layout from "../../components/layout";
 
 const Community: NextPage = () => {
   return (
-    <Layout>
+    <Layout title="우리동네">
       <div className="py-16 px-4 space-y-8">
         {[1, 2, 3, 4, 5, 6].map((_, i) => (
           <div key={i} className="flex flex-col items-start">

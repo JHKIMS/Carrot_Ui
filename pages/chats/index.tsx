@@ -3,7 +3,7 @@ import Layout from "../../components/layout";
 
 const Chats: NextPage = () => {
   return (
-    <Layout>
+    <Layout title="Chat">
       <div className="py-10 divide-y-[3px]">
         {[1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <div

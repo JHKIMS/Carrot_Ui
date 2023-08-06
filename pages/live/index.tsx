@@ -3,7 +3,7 @@ import Layout from "../../components/layout";
 
 const Live: NextPage = () => {
   return (
-    <Layout>
+    <Layout title="실시간Live">
       <div className="py-10 divide-y-2 space-y-4">
         {[1, 2, 3, 4, 5].map((_, i) => (
           <div className="pt-4 px-4" key={i}>
